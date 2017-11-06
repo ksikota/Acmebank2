@@ -1,0 +1,17 @@
+<div class="modal-header">
+    <h3>Amount</h3>
+</div>
+
+<form name="form.userForm" ng-submit="submitForm()" novalidate>
+    <div class="modal-body">
+        <!-- Amount -->
+        <div class="form-group">
+            <input type="text" name="amount" placeholder="0.00" class="form-control" ng-model="amount" required>
+            <p ng-show="form.userForm.name.$invalid && !form.userForm.name.$pristine" class="help-block">You name is required.</p>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary" ng-click="saveTransaction() ng-disabled="form.userForm.$invalid">OK</button>
+        <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+    </div>
+</form>
